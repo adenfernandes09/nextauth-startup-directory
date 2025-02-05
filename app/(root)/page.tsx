@@ -1,13 +1,13 @@
-import StartupCard from "@/components/StartupCard";
+import StartupCard, { StartupTypeCard } from "@/components/StartupCard";
 import SearchForm from "../../components/SearchForm";
+import { client } from "@/sanity/lib/client";
+import { STARTUP_QUERY } from "@/sanity/lib/queries";
 
 export default async function Home({searchParams}: {searchParams: Promise<{query? : string}>}) {
   // console.log(await searchParams);
   const query = (await searchParams).query;
 
-  const posts = [{
-
-  }]
+  const posts = await client.fetch(STARTUP_QUERY);
   return (
     <>
       <section className="pink_container">
