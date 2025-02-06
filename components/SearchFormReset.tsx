@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const SearchFormReset = () => {
     const reset = () => {
-        const form = document.querySelector('.searchForm') as HTMLFormElement;
+        const form = document.querySelector('.search-form') as HTMLFormElement;
         if(form) form.reset();
     }
   return (
