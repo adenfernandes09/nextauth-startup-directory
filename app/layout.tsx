@@ -70,6 +70,8 @@ export default function RootLayout({
         className={workSans.variable}
       >
         {children}
+
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.2/markdown-it.min.js"></script>
       </body>
     </html>
   );
