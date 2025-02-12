@@ -14,3 +14,16 @@ export const STARTUP_QUERY_FIND_BY_ID =
 
 export const START_UP_QUERY_VIEW = defineQuery(`*[_type == "startup" && _id == $id][0]{
   _id, views}`)
+
+
+export const GET_AUTHOR_BY_GHITHUB_ID = defineQuery(`
+  *[_type == 'author' && _id == $id][0]{
+  _id, 
+  id, 
+  name, 
+  username, 
+  email, 
+  image, 
+  bio, 
+  }
+  `)
